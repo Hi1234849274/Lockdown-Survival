@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Movable : MonoBehaviour
 {
@@ -9,7 +7,7 @@ private bool isCarrying = false;
 public GameObject player;
 
     void Start() {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player").transform.Find("PickupSpot").gameObject;
     }
 
 
@@ -20,7 +18,6 @@ public GameObject player;
             transform.position = pos;
         }
         if (Vector2.Distance(transform.position, player.transform.position) < 5) {
-            Debug.Log("Close enough to interact!");
             if (Input.GetKeyDown(KeyCode.F)) {
                 if (isCarrying) {
                     isCarrying = false;

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2783ac471b2c543cd852535d71bcc315, type: 3}
   m_Name: Covid-19 Test Kit
   m_EditorClassIdentifier: 
-  name: 
+  name: Covid-19 Test Kit
   description: 
-  price: 0
+  artWork: {fileID: 0}
+  price: 70
   prefab: {fileID: 0}
