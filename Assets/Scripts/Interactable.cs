@@ -4,12 +4,16 @@ public class Interactable : MonoBehaviour {
     
     private GameObject effect;
     private bool canInteract = false;
+    private GameObject Player;
 
-    public GameObject Player;
+
     public GameObject InteractableEffect;
-
     public float maxDistanceToInteract = 5f;
 
+
+    void Start() {
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
     
     void Update() {
         if (Vector2.Distance(Player.transform.position, transform.position) < maxDistanceToInteract) {
