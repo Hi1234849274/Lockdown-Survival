@@ -13,7 +13,7 @@ public class ShopCard : MonoBehaviour {
 
     public void ShopForItem() {
         Instantiate(item.prefab, gM.DeliverySpot.position, Quaternion.identity);
-        Debug.Log("I just shopped for a " + item.name);
+        Debug.Log("I just shopped for a " + item.name.ToString());
         Destroy(gameObject);
     }
 
